@@ -1,12 +1,17 @@
 package Test;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.Arrays;
 
 public class Unbox {
 	
-	public static void main(String[] args) {
+	public static void main(String[] args) throws IOException {
 		
-		String str = "2[2[x]y]z";
+		BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+		
+		String str = reader.readLine();
 		System.out.print(unpackFunc(str.toCharArray()));
 		
 	}
